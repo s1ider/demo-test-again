@@ -22,11 +22,11 @@ class TestCreateIssue(unittest.TestCase):
 
         r = requests.put(url, data=params, auth=self.creds)
         location = r.headers['Location']
-        self.assertEqual(r.status_code, 201)
+        self.assertEqual(r.status_code, 200)
 
         r = requests.get(location, auth=self.creds)
         self.assertEqual(r.status_code, 200)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
